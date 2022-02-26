@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>exit</title>
+</head>
+
+<body onLoad="alert('Not so easy!');" onunload="OnUnLoad()">
+
+    <p> Do you accept You are Stupid </p>
+    </br></br></br>
+    <div class="butt">
+        <input type="button" class="button" value="NO" onmouseover="myFunction1()" onmouseout="myFunction2()"
+            onclick="msg()" id="myImg1" width="150" height="98" hspace="30">
+        <input type="button" class="button" value="YES" onmouseover="myFunction2()" onmouseout="myFunction1()"
+            onclick="msg()" id="myImg2" width="150" height="98" hspace="30">
+    </div>
+    </br>
+
+    </br>
+
+    <script>
+        function OnUnLoad() {
+            alert("So you are Stupid");
+        }
+        function myFunction() {
+            alert('I knew you are stupid');
+        }
+        function myFunction1() {
+            document.getElementById("myImg1").value = "YES";
+            document.getElementById("myImg2").value = "NO";
+        }
+        function myFunction2() {
+            document.getElementById("myImg1").value = "NO";
+            document.getElementById("myImg2").value = "YES";
+        }
+        function msg() {
+            alert("I knew it you Bitch");
+            window.close();
+        }
+        window.onbeforeunload = function () {
+            return "Are you sure you want to leave this page?";
+        }
+    </script>
+</body>
+
+</html>
