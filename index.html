@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stupid Game</title>
+
+</head>
+
+<body onUnload="OnUnLoad()">
+
+    <h1>" This is a Stupid Game "</h1>
+
+    <h2>Are You Stupid</h2>
+
+
+    <p>CLICK ON EITHER </p>
+    </br></br></br>
+    <div class="butt">
+        <input type="button" class="button" value="NO" onmouseover="myFunction1()" onmouseout="myFunction2()"
+            onclick="msg()" id="myImg1" width="350" height="98">
+        <input type="button" class="button" value="YES" onmouseover="myFunction2()" onmouseout="myFunction1()"
+            onclick="msg()" id="myImg2" width="350" height="98">
+    </div>
+    </br>
+
+    </br>
+    <div class="butt2">
+        <input type="button" class="button" value="Exit" onmouseover="ext()" onclick="exit()" width="250" height="98" hspace="30" <span
+            title="You sure are stupid"></span>
+    </div>
+    <script>
+        var count=0;
+        function OnUnLoad () {
+            alert ("So you are Stupid");
+        }
+        function myFunction1() {
+            document.getElementById("myImg1").value = "YES";
+            document.getElementById("myImg2").value = "NO";
+        }
+        function myFunction2() {
+            document.getElementById("myImg1").value = "NO";
+            document.getElementById("myImg2").value = "YES";
+        }
+
+        function msg() {
+            alert("I Knew You are Stupid");
+        }
+        function ext(){
+            if(count==0){
+                alert('Dont do it');
+                count++;
+            }
+            else if (count==1){
+                alert('plz dont do it!');
+                count++;
+            }
+            else if(count==2){
+                alert('As you wish');
+                count++;
+            }
+    
+        }
+        function exit() {
+            window.open('exit.html', 'print_popup', 'width=500,height=200');
+            window.close();
+        }
+
+    </script>
+</body>
+
+</html>
